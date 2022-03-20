@@ -4,12 +4,11 @@ import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-
+  app.enableCors()
   const swaggerConfig = new DocumentBuilder()
-  .setTitle('Cats example')
-  .setDescription('The cats API description')
+  .setTitle('Documentação de API com Swagger')
+  .setDescription('Documentação de API criada com Swagger')
   .setVersion('1.0')
-  .addTag('cats')
   .build();
   const swaggerDocument = SwaggerModule.createDocument(app, swaggerConfig);
   SwaggerModule.setup('api', app, swaggerDocument);
