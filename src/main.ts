@@ -4,7 +4,6 @@ import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  app.enableCors()
   const swaggerConfig = new DocumentBuilder()
   .setTitle('Documentação de API com Swagger')
   .setDescription('Documentação de API criada com Swagger')
