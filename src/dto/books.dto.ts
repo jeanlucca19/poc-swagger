@@ -3,15 +3,15 @@ import { ApiProperty } from "@nestjs/swagger";
 export class BooksDto {
     @ApiProperty({
         type: String,
-        description: "The title of the book",
-        default: '',
+        example: 'Livro de Javascript',
+        description: 'The title of the book',
         })
-    readonly title: string
+    title: string
 
     @ApiProperty({
         type: String,
+        example: "R$ 15,00",
         description: "The price of the book",
-        default: "R$ 19,90"
     })
-    readonly price: string
+    price: string
 }
